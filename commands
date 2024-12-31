@@ -12,3 +12,8 @@ kubectl set image deployment/backend-prod container=imagename -n ns-backend
 
 kubectl rollout  undo status deployment/backend-prod -n ns-backend --to-revision=3   ----- roleback
 
+kubectl rollout pause deployment/backend-prod -n ns-backend   
+
+kubectl rollout resume deployment/backend-prod -n ns-backend
+
+
