@@ -2,6 +2,8 @@ kubectl get deployment -n ns-backend
 
 kubectl rollout history deployment/backend-prod -n ns-backend
 
+kubectl rollout status deployment/backend-prod -n ns-backend
+
 kubectl scale --replicas=10 deployment/backend-prod -n ns-backend
 
 kubectl set image deployment/backend-prod container=imagename -n ns-backend
